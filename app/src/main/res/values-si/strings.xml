@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Quick Emergency Commands -->
+    <string name="cmd_flood">ගංවතුර</string>
+    <string name="cmd_fire">ගින්න</string>
+    <string name="cmd_landslide">නායයාම</string>
+    <string name="cmd_medical">වෛද්‍ය ආධාර</string>
+    <string name="cmd_trapped">සිරවී සිටී</string>
+    <string name="cmd_building_collapse">ගොඩනැගිල්ලක් කඩා වැටීම</string>
+    <string name="cmd_need_food_water">ආහාර/ජලය අවශ්‍යයි</string>
+    <string name="cmd_need_rescue">මුදාගැනීමක් අවශ්‍යයි</string>
+    <string name="cmd_safe_shelter">ආරක්ෂිත ස්ථානය</string>
+    <string name="cmd_report_hazard">අනතුරක් වාර්තා කරන්න</string>
+    <string name="cmd_sos">SOS</string>
+</resources>

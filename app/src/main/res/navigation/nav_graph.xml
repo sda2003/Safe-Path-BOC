@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!-- Global actions accessible from any screen -->
+    <action android:id="@+id/action_global_authFragment" app:destination="@id/authFragment" app:popUpTo="@id/nav_graph" app:popUpToInclusive="true"/>
+    <action android:id="@+id/action_global_homeFragment" app:destination="@id/homeFragment" app:popUpTo="@id/nav_graph" app:popUpToInclusive="true"/>
+    <action android:id="@+id/action_global_settingsFragment" app:destination="@id/settingsFragment"/>
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.hades.safepath.ui.SplashFragment" />
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.hades.safepath.ui.auth.AuthFragment">
+        <action
+            android:id="@+id/action_auth_to_phone_verification"
+            app:destination="@id/phoneVerificationFragment" />
+        <action
+            android:id="@+id/action_auth_to_otp_verification"
+            app:destination="@id/otpVerificationFragment" />
+        <action
+            android:id="@+id/action_auth_to_check_email"
+            app:destination="@id/checkEmailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkEmailFragment"
+        android:name="com.hades.safepath.ui.auth.CheckEmailFragment"
+        android:label="@string/check_email_title">
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_check_email_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_check_email_to_auth"
+            app:destination="@id/authFragment"
+            app:popUpTo="@id/authFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/phoneVerificationFragment"
+        android:name="com.hades.safepath.ui.verification.PhoneVerificationFragment"
+        android:label="@string/verify_account_title">
+        <argument
+            android:name="prefill_email"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="start_on_email"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_phone_verification_to_otp_verification"
+            app:destination="@id/otpVerificationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otpVerificationFragment"
+        android:name="com.hades.safepath.ui.verification.OtpVerificationFragment"
+        android:label="@string/verify_otp_title">
+        <argument
+            android:name="destination"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="channel"
+            app:argType="string"
+            android:defaultValue="PHONE" />
+        <argument
+            android:name="phone"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_otp_to_verification_success"
+            app:destination="@id/verificationSuccessFragment"
+            app:popUpTo="@id/authFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/verificationSuccessFragment"
+        android:name="com.hades.safepath.ui.verification.VerificationSuccessFragment"
+        android:label="@string/verification_success_title">
+        <action
+            android:id="@+id/action_verification_success_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hades.safepath.ui.home.HomeFragment">
+        <action
+            android:id="@+id/action_home_to_family_circle"
+            app:destination="@id/familyCircleFragment" />
+        <action
+            android:id="@+id/action_home_to_phone_verification"
+            app:destination="@id/phoneVerificationFragment" />
+        <action
+            android:id="@+id/action_home_to_imminentAlert"
+            app:destination="@id/imminentAlertFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_home_to_emergencyPack"
+            app:destination="@id/emergencyPackFragment" />
+        <action
+            android:id="@+id/action_home_to_survivalLibrary"
+            app:destination="@id/survivalLibraryFragment" />
+        <action
+            android:id="@+id/action_home_to_community"
+            app:destination="@id/communityFragment" />
+        <action
+            android:id="@+id/action_home_to_profile"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_home_to_evacuationMap"
+            app:destination="@id/evacuationMapFragment" />
+        <action
+            android:id="@+id/action_home_to_nodeDashboard"
+            app:destination="@id/nodeDashboardFragment" />
+        <action
+            android:id="@+id/action_home_to_aiQa"
+            app:destination="@id/aiQaFragment" />
+        <action
+            android:id="@+id/action_home_to_nearbyNodes"
+            app:destination="@id/nearbyCameraNodesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nearbyCameraNodesFragment"
+        android:name="com.hades.safepath.ui.camera.NearbyCameraNodesFragment"
+        android:label="@string/nearby_nodes_title">
+        <action
+            android:id="@+id/action_nearbyNodes_to_camera"
+            app:destination="@id/safePathCameraFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/safePathCameraFragment"
+        android:name="com.hades.safepath.ui.camera.SafePathCameraFragment"
+        android:label="@string/safepath_camera_title">
+        <argument
+            android:name="nodeId"
+            app:argType="string"
+            android:defaultValue="SP-CAM-001" />
+        <argument
+            android:name="deviceName"
+            app:argType="string"
+            android:defaultValue="SafePath-CAM-001" />
+        <argument
+            android:name="wifiSsid"
+            app:argType="string"
+            android:defaultValue="SafePath-CAM-001" />
+        <argument
+            android:name="wifiIp"
+            app:argType="string"
+            android:defaultValue="192.168.4.1" />
+        <argument
+            android:name="wifiPassword"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="rssi"
+            app:argType="integer"
+            android:defaultValue="-70" />
+        <argument
+            android:name="bluetoothAddress"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nodeDashboardFragment"
+        android:name="com.hades.safepath.ui.hardware.NodeDashboardFragment"
+        android:label="Node Dashboard" />
+
+    <fragment
+        android:id="@+id/aiQaFragment"
+        android:name="com.hades.safepath.ui.qa.AiQaFragment"
+        android:label="@string/ai_qa_title" />
+
+    <fragment
+        android:id="@+id/familyCircleFragment"
+        android:name="com.hades.safepath.ui.family.FamilyCircleFragment"
+        android:label="@string/family_circle_title" />
+
+    <fragment
+        android:id="@+id/imminentAlertFragment"
+        android:name="com.hades.safepath.ui.alert.ImminentAlertFragment">
+        <action
+            android:id="@+id/action_imminentAlert_to_evacuationMap"
+            app:destination="@id/evacuationMapFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/evacuationMapFragment"
+        android:name="com.hades.safepath.ui.map.offline.OfflineMapFragment">
+        <action
+            android:id="@+id/action_evacuationMap_to_immediateActions"
+            app:destination="@id/immediateActionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/immediateActionsFragment"
+        android:name="com.hades.safepath.ui.actions.ImmediateActionsFragment">
+        <action
+            android:id="@+id/action_actions_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/emergencyPackFragment"
+        android:name="com.hades.safepath.ui.pack.EmergencyPackFragment">
+        <action
+            android:id="@+id/action_pack_to_personalize"
+            app:destination="@id/personalizePackFragment" />
+        <action
+            android:id="@+id/action_pack_to_personalized_view"
+            app:destination="@id/personalizedPackViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalizePackFragment"
+        android:name="com.hades.safepath.ui.personalize.PersonalizePackFragment"
+        android:label="@string/personalize_pack_title">
+        <action
+            android:id="@+id/action_personalize_to_pack_view"
+            app:destination="@id/personalizedPackViewFragment"
+            app:popUpTo="@id/personalizePackFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalizedPackViewFragment"
+        android:name="com.hades.safepath.ui.personalize.PersonalizedPackViewFragment"
+        android:label="@string/my_personalized_pack" />
+
+    <fragment
+        android:id="@+id/survivalLibraryFragment"
+        android:name="com.hades.safepath.ui.survival.SurvivalLibraryFragment">
+        <action
+            android:id="@+id/action_survival_to_detail"
+            app:destination="@id/survivalDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/survivalDetailFragment"
+        android:name="com.hades.safepath.ui.survival.SurvivalDetailFragment" />
+
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.hades.safepath.ui.chat.CommunityFragment">
+        <action
+            android:id="@+id/action_community_to_chatRoom"
+            app:destination="@id/chatRoomFragment" />
+        <action
+            android:id="@+id/action_community_to_meshNotes"
+            app:destination="@id/meshNotesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatRoomFragment"
+        android:name="com.hades.safepath.ui.chat.ChatRoomFragment" />
+
+    <fragment
+        android:id="@+id/meshNotesFragment"
+        android:name="com.hades.safepath.ui.mesh.MeshNotesFragment" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.hades.safepath.ui.profile.ProfileFragment" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.hades.safepath.ui.settings.SettingsFragment" />
+
+</navigation>

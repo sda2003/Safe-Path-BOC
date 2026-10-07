@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flood — Immediate Actions"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D32F2F"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_guidance_steps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="true"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_reached_shelter"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="I have reached the shelter"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:minHeight="64dp"
+        android:background="#2E7D32"
+        android:backgroundTint="#2E7D32"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

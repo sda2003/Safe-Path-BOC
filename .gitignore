@@ -1,0 +1,41 @@
+# Kiro/IDE specific
+.kiro/
+.vscode/
+.idea/
+.agents/
+*.iml
+
+# Android/Gradle specific
+captured_blobs/
+DerivedData/
+.gradle/
+build/
+app/build/
+local.properties
+.env
+.env.local
+.env.*.local
+!.env.example
+!local.properties.example
+
+# Secrets and Keys
+*.jks
+*.keystore
+*.p12
+*.pem
+google-services.json
+*-firebase-adminsdk-*.json
+signing-key.*
+
+# Logs
+*.log
+
+# Tile build cache (source tiles live in app/src/main/assets/tiles/*.zip)
+tools/_tile_cache/
+tools/_tmp_osm/
+
+# Temp files
+current_ui.xml
+dump.xml
+skills-lock.json
+screen_*.png

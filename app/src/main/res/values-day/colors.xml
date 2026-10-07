@@ -1,0 +1,9 @@
+<resources>
+    <color name="bg_primary">#F5F5F5</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_card_elevated">#EFEFEF</color>
+    <color name="text_primary">#111111</color>
+    <color name="text_secondary">#555555</color>
+    <color name="text_muted">#888888</color>
+    <color name="border">#DDDDDD</color>
+</resources>

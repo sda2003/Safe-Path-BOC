@@ -1,0 +1,69 @@
+{
+  "type": "FeatureCollection",
+  "note": "PLACEHOLDER — replace with authoritative NBRO/DMC data before production deployment",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ratnapura Landslide Zone A",
+        "district": "Ratnapura",
+        "hazardType": "landslide",
+        "source": "PLACEHOLDER"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.370, 6.695],
+            [80.390, 6.695],
+            [80.390, 6.710],
+            [80.370, 6.710],
+            [80.370, 6.695]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kegalle Landslide Zone A",
+        "district": "Kegalle",
+        "hazardType": "landslide",
+        "source": "PLACEHOLDER"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.320, 7.270],
+            [80.345, 7.270],
+            [80.345, 7.285],
+            [80.320, 7.285],
+            [80.320, 7.270]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kalutara Landslide Zone A",
+        "district": "Kalutara",
+        "hazardType": "landslide",
+        "source": "PLACEHOLDER"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.120, 6.610],
+            [80.140, 6.610],
+            [80.140, 6.625],
+            [80.120, 6.625],
+            [80.120, 6.610]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+<resources>
+    <string name="app_name">SafePath</string>
+
+    <!-- Phone / email verification -->
+    <string name="verify_account_title">உங்கள் கணக்கை சரிபார்க்கவும்</string>
+    <string name="verify_phone_title">உங்கள் தொலைபேசியை சரிபார்க்கவும்</string>
+    <string name="verify_phone_subtitle">குடும்ப வட்டத்தின் அம்சங்களை திறக்க, நாங்கள் உங்களுக்கு ஒருமுறை பயன்படுத்தும் குறியீட்டை குறுஞ்செய்தியாக அனுப்புவோம்.</string>
+    <string name="verify_email_subtitle">குடும்ப வட்டத்தின் அம்சங்களை திறக்க, நாங்கள் உங்களுக்கு ஒருமுறை பயன்படுத்தும் குறியீட்டை மின்னஞ்சலில் அனுப்புவோம்.</string>
+    <string name="verify_channel_phone">தொலைபேசி</string>
+    <string name="verify_channel_email">மின்னஞ்சல்</string>
+    <string name="email_hint">மின்னஞ்சல் முகவரி</string>
+    <string name="try_email_instead">குறுஞ்செய்தி வேலை செய்யவில்லையா? மின்னஞ்சல் மூலம் சரிபார்க்கவும்</string>
+    <string name="phone_hint">அலைபேசி எண்</string>
+    <string name="send_verification_code">சரிபார்ப்புக் குறியீட்டை அனுப்பு</string>
+    <string name="verify_otp_title">சரிபார்ப்புக் குறியீட்டை உள்ளிடவும்</string>
+    <string name="verify_otp_subtitle">%1$s-க்கு அனுப்பப்பட்ட 6-இலக்க குறியீட்டை உள்ளிடவும்</string>
+    <string name="otp_hint">6-இலக்க குறியீடு</string>
+    <string name="verify_code">சரிபார்</string>
+    <string name="resend_code">குறியீட்டை மீண்டும் அனுப்பு</string>
+    <string name="verification_success_title">நீங்கள் சரிபார்க்கப்பட்டீர்கள்</string>
+    <string name="verification_success_subtitle">குடும்ப வட்டம் இப்போது திறக்கப்பட்டது. நம்பகமான தொடர்புகளைச் சேர்த்து "நான் பாதுகாப்பாக இருக்கிறேன்" என அனுப்பவும்.</string>
+    <string name="unlock_family_circle">SafePath-க்கு தொடரவும்</string>
+    <string name="error_invalid_phone">செல்லுபடியாகும் தொலைபேசி எண்ணை உள்ளிடவும் (எ.கா. 771234567).</string>
+    <string name="error_invalid_email">செல்லுபடியாகும் மின்னஞ்சல் முகவரியை உள்ளிடவும்.</string>
+    <string name="error_invalid_otp">குறுஞ்செய்தியில் பெற்ற 6-இலக்க குறியீட்டை உள்ளிடவும்.</string>
+    <string name="error_invalid_email_otp">மின்னஞ்சலில் பெற்ற 6-இலக்க குறியீட்டை உள்ளிடவும்.</string>
+    <string name="signup_check_email">கணக்கு உருவாக்கப்பட்டது. உறுதிப்படுத்தல் இணைப்பு அல்லது குறியீட்டிற்கு %1$s-ஐ சரிபார்க்கவும்.</string>
+    <string name="check_email_title">உங்கள் மின்னஞ்சலை சரிபார்க்கவும்</string>
+    <string name="check_email_subtitle">நாங்கள் %1$s-க்கு உறுதிப்படுத்தலை அனுப்பியுள்ளோம்.\n\n1. மின்னஞ்சலைத் திறந்து இணைப்பைத் தட்டவும், அல்லது 6-இலக்க குறியீட்டை உள்ளிடவும்.\n2. பின்னர் "ஏற்கனவே உறுதிப்படுத்தப்பட்டதா? உள்நுழைக" என்பதைத் தட்டவும்.</string>
+    <string name="open_email_app">மின்னஞ்சல் செயலியைத் திற</string>
+    <string name="open_email_failed">மின்னஞ்சல் செயலியைத் திறக்க முடியவில்லை</string>
+    <string name="already_confirmed_sign_in">ஏற்கனவே உறுதிப்படுத்தப்பட்டதா? உள்நுழைக</string>
+    <string name="code_resent">குறியீடு மீண்டும் அனுப்பப்பட்டது — உங்கள் மின்னஞ்சலை சரிபார்க்கவும்</string>
+
+    <!-- Family Circle gate -->
+    <string name="family_circle_title">குடும்ப வட்டம்</string>
+    <string name="family_circle_locked">தொடர்புகளைச் சேர்க்க மற்றும் நான் பாதுகாப்பாக இருக்கிறேன் என அனுப்ப, உங்கள் தொலைபேசி அல்லது மின்னஞ்சலை சரிபார்க்கவும்.</string>
+    <string name="family_circle_unlocked">சரிபார்க்கப்பட்டது — தொடர்புகளை நிர்வகித்து, நான் பாதுகாப்பாக இருக்கிறேன் என அனுப்பவும்.</string>
+    <string name="family_circle_tier_info">%1$s திட்டம் — %3$d-ல் %2$d தொடர்புகள்</string>
+    <string name="family_circle_offline_cached">சரிபார்க்கப்பட்டது (ஆஃப்லைன்) — நான் பாதுகாப்பாக இருக்கிறேன் வேலை செய்யும். தொடர்புகளை நிர்வகிக்க இணையத்துடன் இணைக்கவும்.</string>
+    <string name="verify_now">இப்போது சரிபார்க்கவும்</string>
+    <string name="verify_with_phone">தொலைபேசியுடன் சரிபார்க்கவும்</string>
+    <string name="im_safe_button">நான் பாதுகாப்பாக இருக்கிறேன்</string>
+    <string name="im_safe_sent">உங்கள் குடும்ப வட்டத்திற்கு நான் பாதுகாப்பாக இருக்கிறேன் என அனுப்பப்பட்டது.</string>
+    <string name="im_safe_queued">நான் பாதுகாப்பாக இருக்கிறேன் சேமிக்கப்பட்டது — நீங்கள் ஆன்லைனில் வந்தவுடன் அனுப்பப்படும்.</string>
+    <string name="trusted_contacts">நம்பகமான தொடர்புகள்</string>
+    <string name="contact_name_hint">தொடர்பு பெயர்</string>
+    <string name="contact_phone_hint">தொலைபேசி எண்</string>
+    <string name="add_contact">தொடர்பைச் சேர்</string>
+    <string name="remove_contact">தொடர்பை அகற்று</string>
+    <string name="manage_family_circle">குடும்ப வட்டத்தை நிர்வகி</string>
+
+    <!-- AI Prep Assistant -->
+    <string name="personalize_pack_title">எனது அவசர தொகுப்பை தனிப்பயனாக்கு</string>
+    <string name="personalize_pack_subtitle">ஆன்லைனில் மட்டும் — ஒரு முறை இயங்கும், பின்னர் ஆஃப்லைனில் வேலை செய்யும்.</string>
+    <string name="household_size_hint">குடும்ப அளவு</string>
+    <string name="has_kids">குடும்பத்தில் உள்ள குழந்தைகள்</string>
+    <string name="kids_ages_hint">குழந்தைகளின் வயது (எ.கா. 3, 7)</string>
+    <string name="has_elderly">முதியவர்கள்</string>
+    <string name="has_pets">செல்லப்பிராணிகள்</string>
+    <string name="pet_type_hint">செல்லப்பிராணி வகை (எ.கா. நாய், பூனை)</string>
+    <string name="medical_conditions_hint">மருத்துவ நிலைமைகள் அல்லது மருந்துகள்</string>
+    <string name="generate_my_pack">எனது தொகுப்பை உருவாக்கு</string>
+    <string name="personalize_with_ai">✨ AI மூலம் தனிப்பயனாக்கு (ஆன்லைன்)</string>
+    <string name="view_personalized_pack">எனது தனிப்பயனாக்கப்பட்ட தொகுப்பைக் காண்</string>
+    <string name="my_personalized_pack">எனது தனிப்பயனாக்கப்பட்ட அவசர தொகுப்பு</string>
+    <string name="personalized_checklist">சரிபார்ப்பு பட்டியல்</string>
+    <string name="personalized_tips">தனிப்பயனாக்கப்பட்ட உயிர்வாழும் குறிப்புகள்</string>
+    <string name="using_default_checklist">இயல்புநிலை சரிபார்ப்பு பட்டியலைப் பயன்படுத்துகிறது — AI கிடைக்கவில்லை.</string>
+    <string name="personalize_requires_internet">தனிப்பயனாக்க இணையம் தேவை. உங்கள் ஆஃப்லைன் சரிபார்ப்பு பட்டியல் உள்ளது.</string>
+
+    <!-- Community hub + mesh notes -->
+    <string name="community_hub_title">சமூக மையம்</string>
+    <string name="community_status_online">ஆன்லைன் — அரட்டை மற்றும் ஒத்திசைவு கிடைக்கிறது</string>
+    <string name="community_status_offline">ஆஃப்லைன் — அருகில் பகிர Mesh குறிப்புகளைப் பயன்படுத்தவும்</string>
+    <string name="community_online_chat">ஆன்லைன் அரட்டை</string>
+    <string name="community_online_chat_hint">உங்களிடம் இணையம் இருக்கும்போது Supabase சமூக அறை.</string>
+    <string name="community_mesh_notes">Mesh குறிப்புகள்</string>
+    <string name="community_mesh_notes_hint">ப்ளூடூத் மூலம் குறுகிய குறிப்புகள். நீங்கள் இணைக்கப்படும்போது ஒத்திசைக்கப்படும்.</string>
+    <string name="mesh_notes_title">Mesh குறிப்புகள்</string>
+    <string name="mesh_note_hint">குறுகிய குறிப்பு (அதிகபட்சம் 280 எழுத்துகள்)</string>
+    <string name="mesh_send">குறிப்பை அனுப்பு</string>
+    <string name="mesh_type_info">தகவல்</string>
+    <string name="mesh_type_hazard">ஆபத்து</string>
+    <string name="mesh_type_need">தேவை</string>
+    <string name="mesh_type_safe">பாதுகாப்பு</string>
+    <string name="mesh_banner_online">ஆன்லைன் — குறிப்புகள் கிளவுட்டில் ஒத்திசைக்கப்படுகின்றன</string>
+    <string name="mesh_banner_online_peers">ஆன்லைன் · %1$d அருகில்</string>
+    <string name="mesh_banner_offline">ஆஃப்லைன் Mesh — அருகிலுள்ள தொலைபேசிகளைத் தேடுகிறது…</string>
+    <string name="mesh_banner_offline_peers">ஆஃப்லைன் Mesh · %1$d இணைக்கப்பட்டுள்ளது</string>
+    <string name="mesh_permission_denied">Mesh குறிப்புகளுக்கு ப்ளூடூத் அனுமதிகள் தேவை.</string>
+
+    <!-- AI Q&A -->
+    <string name="ai_qa_title">SafePath AI-யிடம் கேள்</string>
+    <string name="ai_qa_subtitle">நடைமுறை பேரழிவு ஆலோசனையைப் பெறுங்கள். அடுத்த முறை ஆஃப்லைனில் வேலை செய்ய பதில்கள் சேமிக்கப்படும்.</string>
+    <string name="ai_qa_home_hint">வெள்ளம், தொகுப்பு மற்றும் முதலுதவி பற்றி கேளுங்கள்</string>
+    <string name="ai_qa_suggestions">பரிந்துரைக்கப்பட்டவை</string>
+    <string name="ai_qa_answer">பதில்</string>
+    <string name="ai_qa_history">சேமிக்கப்பட்ட பதில்கள்</string>
+    <string name="ai_qa_hint">என்ன செய்வது என்று கேள்…</string>
+    <string name="ai_qa_ask">கேள்</string>
+    <string name="ai_qa_banner_online">ஆன்லைன் — AI பதில்கள் சேமிக்கப்படும்.</string>
+    <string name="ai_qa_banner_offline">ஆஃப்லைன் — உள்ளமைக்கப்பட்ட பதிலுக்கு பரிந்துரைக்கப்பட்ட கேள்வியைத் தட்டவும்.</string>
+    <string name="view_live_alert_map">நேரலை எச்சரிக்கை வரைபடத்தைக் காண்</string>
+
+    <!-- Report alert sheet -->
+    <string name="report_alert_title">அவசர எச்சரிக்கையைப் புகாரளி</string>
+    <string name="report_alert_subtitle">உங்கள் GPS இடம் தானாகவே சேர்க்கப்படும்.</string>
+    <string name="report_location_waiting">இடத்திற்காகக் காத்திருக்கிறது…</string>
+    <string name="report_location_getting">உங்கள் இடத்தைப் பெறுகிறது…</string>
+    <string name="report_location_ready">இடம் தயாராக உள்ளது · %1$.4f, %2$.4f</string>
+    <string name="report_location_failed">இடத்தைப் பெற முடியவில்லை</string>
+    <string name="report_location_retry">இடத்தை மீண்டும் முயற்சிக்கவும்</string>
+    <string name="report_what_happening">என்ன நடக்கிறது?</string>
+    <string name="report_your_district">உங்கள் மாவட்டம்</string>
+    <string name="report_severity">தீவிரத்தன்மை நிலை</string>
+    <string name="report_description_hint">நீங்கள் பார்ப்பதை விவரிக்கவும் (விருப்பத்தேர்வு)</string>
+    <string name="report_submit">எச்சரிக்கையைச் சமர்ப்பி</string>
+    <string name="report_submitting">சமர்ப்பிக்கிறது…</string>
+    <string name="report_select_type">என்ன நடக்கிறது என்பதைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="report_need_location">இடம் தேவை — மீண்டும் முயற்சிக்கவும் என்பதைத் தட்டவும்</string>
+    <string name="report_success">எச்சரிக்கை சமர்ப்பிக்கப்பட்டது. பாதுகாப்பாக இருங்கள்.</string>
+    <string name="report_type_flood">வெள்ளம்</string>
+    <string name="report_type_landslide">நிலச்சரிவு</string>
+    <string name="report_type_fire">தீ</string>
+    <string name="report_type_tsunami">சுனாமி</string>
+    <string name="report_type_earthquake">பூகம்பம்</string>
+    <string name="report_type_other">மற்றவை</string>
+    <string name="report_sev_low">குறைவு</string>
+    <string name="report_sev_moderate">மிதமானது</string>
+    <string name="report_sev_high">அதிகம்</string>
+    <string name="report_sev_critical">மிகவும் ஆபத்தானது</string>
+
+    <string name="home_no_active_alerts">செயலில் உள்ள\nஎச்சரிக்கைகள் இல்லை</string>
+    <string name="home_active_alert">செயலில் உள்ள\nஎச்சரிக்கை</string>
+    <string name="home_area_safe">உங்கள் பகுதி தற்போது பாதுகாப்பாக உள்ளது.\nஏதேனும் மாறினால் நாங்கள் உங்களை எச்சரிப்போம்.</string>
+    <string name="home_area_safe_with_shelters">உங்கள் பகுதி தற்போது பாதுகாப்பாக உள்ளது.\nஇருண்ட புள்ளிகள் = பாதுகாப்பான தங்குமிடங்கள்.</string>
+    <string name="home_affected_area">பாதிக்கப்பட்ட பகுதி: %1$s</string>
+
+    <!-- Quick Emergency Commands -->
+    <string name="cmd_flood">வெள்ளம்</string>
+    <string name="cmd_fire">தீ</string>
+    <string name="cmd_landslide">நிலச்சரிவு</string>
+    <string name="cmd_medical">மருத்துவ உதவி</string>
+    <string name="cmd_trapped">சிக்கியுள்ளோம்</string>
+    <string name="cmd_building_collapse">கட்டடம் இடிந்தது</string>
+    <string name="cmd_need_food_water">உணவு/தண்ணீர் தேவை</string>
+    <string name="cmd_need_rescue">மீட்பு தேவை</string>
+    <string name="cmd_safe_shelter">பாதுகாப்பான இடம்</string>
+    <string name="cmd_report_hazard">ஆபத்தை புகாரளி</string>
+    <string name="cmd_sos">SOS</string>
+</resources>

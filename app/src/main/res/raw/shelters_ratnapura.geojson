@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "note": "PLACEHOLDER — replace with authoritative NBRO/DMC data before production deployment",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ratnapura Central School",
+        "district": "Ratnapura",
+        "capacity": 500,
+        "verified": true,
+        "type": "school"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.3988, 6.6831]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ratnapura District Hospital",
+        "district": "Ratnapura",
+        "capacity": 300,
+        "verified": true,
+        "type": "hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.3972, 6.6824]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ratnapura Divisional Secretariat",
+        "district": "Ratnapura",
+        "capacity": 200,
+        "verified": true,
+        "type": "government"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [80.3994, 6.6841]
+      }
+    }
+  ]
+}

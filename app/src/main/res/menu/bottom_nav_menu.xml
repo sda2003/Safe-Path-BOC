@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Home" />
+    <item
+        android:id="@+id/emergencyPackFragment"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Pack" />
+    <item
+        android:id="@+id/placeholder"
+        android:title=""
+        android:enabled="false" />
+    <item
+        android:id="@+id/survivalLibraryFragment"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="Survival" />
+    <item
+        android:id="@+id/communityFragment"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="Community" />
+</menu>

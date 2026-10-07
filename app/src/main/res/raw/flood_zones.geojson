@@ -1,0 +1,69 @@
+{
+  "type": "FeatureCollection",
+  "note": "PLACEHOLDER — replace with authoritative NBRO/DMC data before production deployment",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ratnapura Flood Zone A",
+        "district": "Ratnapura",
+        "hazardType": "flood",
+        "source": "PLACEHOLDER"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.385, 6.668],
+            [80.397, 6.668],
+            [80.397, 6.678],
+            [80.385, 6.678],
+            [80.385, 6.668]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kegalle Flood Zone A",
+        "district": "Kegalle",
+        "hazardType": "flood",
+        "source": "PLACEHOLDER"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.340, 7.235],
+            [80.355, 7.235],
+            [80.355, 7.245],
+            [80.340, 7.245],
+            [80.340, 7.235]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kalutara Flood Zone A",
+        "district": "Kalutara",
+        "hazardType": "flood",
+        "source": "PLACEHOLDER"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [79.950, 6.570],
+            [79.958, 6.570],
+            [79.958, 6.580],
+            [79.950, 6.580],
+            [79.950, 6.570]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SimulatorBottomSheetFragment layout — debug builds only.
+    All font sizes ≥18sp, button height 56dp, high contrast colors.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inject Signal Code"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_text_primary"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_signals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <RadioButton android:id="@+id/rb_111" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="111 — Flood Advisory"
+            android:textSize="18sp" android:textColor="@color/color_text_primary" />
+
+        <RadioButton android:id="@+id/rb_112" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="112 — Flood Alert"
+            android:textSize="18sp" android:textColor="@color/color_text_primary" />
+
+        <RadioButton android:id="@+id/rb_113" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="113 — Flood Imminent"
+            android:textSize="18sp" android:textColor="@color/color_text_primary" />
+
+        <RadioButton android:id="@+id/rb_121" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="121 — Landslide Advisory"
+            android:textSize="18sp" android:textColor="@color/color_text_primary" />
+
+        <RadioButton android:id="@+id/rb_122" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="122 — Landslide Alert"
+            android:textSize="18sp" android:textColor="@color/color_text_primary" />
+
+        <RadioButton android:id="@+id/rb_123" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="123 — Landslide Imminent"
+            android:textSize="18sp" android:textColor="@color/color_text_primary" />
+
+        <RadioButton android:id="@+id/rb_131" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="131 — Cyclone Advisory"
+            android:textSize="18sp" android:textColor="@color/color_text_primary" />
+
+        <RadioButton android:id="@+id/rb_132" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="132 — Cyclone Alert"
+            android:textSize="18sp" android:textColor="@color/color_text_primary" />
+
+        <RadioButton android:id="@+id/rb_133" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="133 — Cyclone Imminent"
+            android:textSize="18sp" android:textColor="@color/color_text_primary" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_inject"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Inject Signal"
+        android:textSize="18sp"
+        android:minHeight="56dp"
+        android:backgroundTint="@color/color_alert_imminent"
+        android:textColor="@color/color_text_on_dark" />
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<resources>
+    <string name="app_name">SafePath</string>
+
+    <!-- Phone / email verification -->
+    <string name="verify_account_title">Verifica tu cuenta</string>
+    <string name="verify_phone_title">Verifica tu teléfono</string>
+    <string name="verify_phone_subtitle">Te enviaremos un código de un solo uso para desbloquear las funciones del Círculo Familiar.</string>
+    <string name="verify_email_subtitle">Te enviaremos un correo electrónico con un código de un solo uso para desbloquear las funciones del Círculo Familiar.</string>
+    <string name="verify_channel_phone">Teléfono</string>
+    <string name="verify_channel_email">Correo electrónico</string>
+    <string name="email_hint">Dirección de correo electrónico</string>
+    <string name="try_email_instead">¿El SMS no funciona? Verifica con el correo electrónico</string>
+    <string name="phone_hint">Número de móvil</string>
+    <string name="send_verification_code">Enviar código de verificación</string>
+    <string name="verify_otp_title">Ingresa el código de verificación</string>
+    <string name="verify_otp_subtitle">Ingresa el código de 6 dígitos enviado a %1$s</string>
+    <string name="otp_hint">Código de 6 dígitos</string>
+    <string name="verify_code">Verificar</string>
+    <string name="resend_code">Reenviar código</string>
+    <string name="verification_success_title">Estás verificado</string>
+    <string name="verification_success_subtitle">El Círculo Familiar ahora está desbloqueado. Agrega contactos de confianza y envía transmisiones de "Estoy a salvo".</string>
+    <string name="unlock_family_circle">Continuar a SafePath</string>
+    <string name="error_invalid_phone">Ingresa un número de teléfono válido (ej. 771234567).</string>
+    <string name="error_invalid_email">Ingresa una dirección de correo electrónico válida.</string>
+    <string name="error_invalid_otp">Ingresa el código de 6 dígitos de tu SMS.</string>
+    <string name="error_invalid_email_otp">Ingresa el código de 6 dígitos de tu correo electrónico.</string>
+    <string name="signup_check_email">Cuenta creada. Revisa %1$s para un enlace o código de confirmación.</string>
+    <string name="check_email_title">Revisa tu correo electrónico</string>
+    <string name="check_email_subtitle">Hemos enviado una confirmación a %1$s.\n\n1. Abre el correo y toca el enlace, O ingresa el código de 6 dígitos.\n2. Luego toca “¿Ya lo confirmaste? Iniciar sesión”.</string>
+    <string name="open_email_app">Abrir aplicación de correo</string>
+    <string name="open_email_failed">No se pudo abrir la aplicación de correo</string>
+    <string name="already_confirmed_sign_in">¿Ya lo confirmaste? Iniciar sesión</string>
+    <string name="code_resent">Código reenviado — revisa tu bandeja de entrada</string>
+
+    <!-- Family Circle gate -->
+    <string name="family_circle_title">Círculo Familiar</string>
+    <string name="family_circle_locked">Verifica tu teléfono o correo electrónico para agregar contactos y enviar actualizaciones de Estoy a salvo.</string>
+    <string name="family_circle_unlocked">Verificado — administra contactos y envía actualizaciones de Estoy a salvo.</string>
+    <string name="family_circle_tier_info">Plan %1$s — %2$d de %3$d contactos</string>
+    <string name="family_circle_offline_cached">Verificado (sin conexión) — Estoy a salvo funciona. Conéctate para administrar contactos.</string>
+    <string name="verify_now">Verificar ahora</string>
+    <string name="verify_with_phone">Verificar con teléfono</string>
+    <string name="im_safe_button">Estoy a salvo</string>
+    <string name="im_safe_sent">Estoy a salvo enviado a tu Círculo Familiar.</string>
+    <string name="im_safe_queued">Estoy a salvo guardado — se enviará cuando vuelvas a conectarte.</string>
+    <string name="trusted_contacts">Contactos de confianza</string>
+    <string name="contact_name_hint">Nombre de contacto</string>
+    <string name="contact_phone_hint">Número de teléfono</string>
+    <string name="add_contact">Agregar contacto</string>
+    <string name="remove_contact">Eliminar contacto</string>
+    <string name="manage_family_circle">Administrar Círculo Familiar</string>
+
+    <!-- AI Prep Assistant -->
+    <string name="personalize_pack_title">Personalizar Mi Paquete de Emergencia</string>
+    <string name="personalize_pack_subtitle">Solo en línea — se ejecuta una vez, luego funciona sin conexión.</string>
+    <string name="household_size_hint">Tamaño del hogar</string>
+    <string name="has_kids">Niños en el hogar</string>
+    <string name="kids_ages_hint">Edades de los niños (ej. 3, 7)</string>
+    <string name="has_elderly">Miembros ancianos</string>
+    <string name="has_pets">Mascotas</string>
+    <string name="pet_type_hint">Tipo de mascota (ej. perro, gato)</string>
+    <string name="medical_conditions_hint">Condiciones médicas o medicamentos</string>
+    <string name="generate_my_pack">Generar mi paquete</string>
+    <string name="personalize_with_ai">✨ Personalizar con IA (en línea)</string>
+    <string name="view_personalized_pack">Ver mi paquete personalizado</string>
+    <string name="my_personalized_pack">Mi Paquete de Emergencia Personalizado</string>
+    <string name="personalized_checklist">Lista de verificación</string>
+    <string name="personalized_tips">Consejos de supervivencia adaptados</string>
+    <string name="using_default_checklist">Usando la lista de verificación predeterminada — IA no disponible.</string>
+    <string name="personalize_requires_internet">Se requiere Internet para personalizar. Tu lista de verificación estándar está disponible.</string>
+
+    <!-- Community hub + mesh notes -->
+    <string name="community_hub_title">Comunidad</string>
+    <string name="community_status_online">En línea — chat y sincronización disponibles</string>
+    <string name="community_status_offline">Sin conexión — usa Notas Mesh para compartir cerca</string>
+    <string name="community_online_chat">Chat en línea</string>
+    <string name="community_online_chat_hint">Sala de comunidad Supabase cuando tienes internet.</string>
+    <string name="community_mesh_notes">Notas Mesh</string>
+    <string name="community_mesh_notes_hint">Notas cortas de peligro/necesidad a través de Bluetooth. Se sincroniza al conectarte.</string>
+    <string name="mesh_notes_title">Notas Mesh</string>
+    <string name="mesh_note_hint">Nota corta (máx. 280 caracteres)</string>
+    <string name="mesh_send">Enviar nota</string>
+    <string name="mesh_type_info">Información</string>
+    <string name="mesh_type_hazard">Peligro</string>
+    <string name="mesh_type_need">Necesidad</string>
+    <string name="mesh_type_safe">A salvo</string>
+    <string name="mesh_banner_online">En línea — las notas se sincronizan a la nube</string>
+    <string name="mesh_banner_online_peers">En línea · %1$d par(es) mesh cerca</string>
+    <string name="mesh_banner_offline">Mesh sin conexión — buscando teléfonos cercanos…</string>
+    <string name="mesh_banner_offline_peers">Mesh sin conexión · %1$d par(es) conectados</string>
+    <string name="mesh_permission_denied">Permisos de Bluetooth necesarios para notas mesh.</string>
+
+    <!-- AI Q&A -->
+    <string name="ai_qa_title">Pregunta a la IA de SafePath</string>
+    <string name="ai_qa_subtitle">Obtén consejos prácticos para desastres. Las respuestas se guardan para usarlas sin conexión.</string>
+    <string name="ai_qa_home_hint">Pregunta sobre inundaciones, paquetes y primeros auxilios</string>
+    <string name="ai_qa_suggestions">Sugeridos</string>
+    <string name="ai_qa_answer">Respuesta</string>
+    <string name="ai_qa_history">Respuestas guardadas</string>
+    <string name="ai_qa_hint">Pregunta qué hacer…</string>
+    <string name="ai_qa_ask">Preguntar</string>
+    <string name="ai_qa_banner_online">En línea — las sugerencias funcionan en cualquier momento; respuestas de IA se guardan.</string>
+    <string name="ai_qa_banner_offline">Sin conexión — toca una pregunta sugerida para obtener una respuesta integrada.</string>
+    <string name="view_live_alert_map">Ver mapa de alertas en vivo</string>
+
+    <!-- Report alert sheet -->
+    <string name="report_alert_title">Reportar una alerta de emergencia</string>
+    <string name="report_alert_subtitle">Tu ubicación GPS será incluida automáticamente.</string>
+    <string name="report_location_waiting">Esperando ubicación…</string>
+    <string name="report_location_getting">Obteniendo tu ubicación…</string>
+    <string name="report_location_ready">Ubicación lista · %1$.4f, %2$.4f</string>
+    <string name="report_location_failed">No se pudo obtener la ubicación</string>
+    <string name="report_location_retry">Reintentar ubicación</string>
+    <string name="report_what_happening">¿Qué está pasando?</string>
+    <string name="report_your_district">Tu distrito</string>
+    <string name="report_severity">Nivel de severidad</string>
+    <string name="report_description_hint">Describe lo que ves (opcional)</string>
+    <string name="report_submit">Enviar alerta</string>
+    <string name="report_submitting">Enviando…</string>
+    <string name="report_select_type">Selecciona qué está pasando</string>
+    <string name="report_need_location">La ubicación es necesaria — toca reintentar</string>
+    <string name="report_success">Alerta enviada. Mantente a salvo.</string>
+    <string name="report_type_flood">Inundación</string>
+    <string name="report_type_landslide">Deslizamiento</string>
+    <string name="report_type_fire">Incendio</string>
+    <string name="report_type_tsunami">Tsunami</string>
+    <string name="report_type_earthquake">Terremoto</string>
+    <string name="report_type_other">Otro</string>
+    <string name="report_sev_low">Bajo</string>
+    <string name="report_sev_moderate">Moderado</string>
+    <string name="report_sev_high">Alto</string>
+    <string name="report_sev_critical">Crítico</string>
+
+    <string name="home_no_active_alerts">No hay Alertas\nActivas</string>
+    <string name="home_active_alert">Alerta\nActiva</string>
+    <string name="home_area_safe">Tu área está a salvo.\nTe alertaremos si algo cambia.</string>
+    <string name="home_area_safe_with_shelters">Tu área está a salvo.\nPuntos oscuros = refugios seguros.</string>
+    <string name="home_affected_area">Área afectada: %1$s</string>
+</resources>

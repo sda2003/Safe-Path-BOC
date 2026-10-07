@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shelter map marker — green flag shape -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="48dp"
+    android:viewportWidth="32"
+    android:viewportHeight="48">
+
+    <!-- Pin body -->
+    <path
+        android:fillColor="#22C55E"
+        android:pathData="M16,0 C7.163,0 0,7.163 0,16 C0,28 16,48 16,48 C16,48 32,28 32,16 C32,7.163 24.837,0 16,0 Z" />
+
+    <!-- Inner circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,10 C12.686,10 10,12.686 10,16 C10,19.314 12.686,22 16,22 C19.314,22 22,19.314 22,16 C22,12.686 19.314,10 16,10 Z" />
+
+</vector>

@@ -1,0 +1,30 @@
+<resources>
+    <color name="colorPrimary">#EF9A9A</color>
+    <color name="colorPrimaryVariant">#B71C1C</color>
+    <color name="colorOnPrimary">#000000</color>
+    <color name="colorSecondary">#FFCC80</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorBackground">#121212</color>
+    <color name="colorSurface">#1E1E1E</color>
+    <color name="colorOnBackground">#FFFFFF</color>
+    <color name="colorOnSurface">#FFFFFF</color>
+    <color name="colorRouteOverlay">#EF9A9A</color>
+    <color name="colorShelterMarker">#A5D6A7</color>
+    <color name="colorWarningText">#FFCC80</color>
+
+    <!-- Alert severity colors — same in dark mode (high contrast required) -->
+    <color name="color_alert_imminent">#C0392B</color>
+    <color name="color_alert_level2">#E67E22</color>
+    <color name="color_alert_advisory">#27AE60</color>
+    <color name="color_safe_route">#2980B9</color>
+    <color name="color_background_alert">#1C1C1E</color>
+
+    <!-- UI surface colors (dark mode) -->
+    <color name="color_card_background">#2C2C2E</color>
+    <color name="color_text_primary">#FFFFFF</color>
+    <color name="color_text_secondary">#AEAEB2</color>
+    <color name="color_text_on_dark">#FFFFFF</color>
+    <color name="color_chip_offline">#C0392B</color>
+    <color name="color_chip_data">#E67E22</color>
+    <color name="color_chip_cb">#27AE60</color>
+</resources>

@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#D72B2B"
+        android:pathData="M54,54m-42,0a42,42 0,1,1 84,0a42,42 0,1,1 -84,0"/>
+
+    <!-- Shield body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,22 L34,30 L34,48 C34,62 42,74 54,79 C66,74 74,62 74,48 L74,30 Z"/>
+
+    <!-- S-curve road inside shield -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#D72B2B"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M46,42 C46,38 49,36 52,36 C55,36 58,38 58,41 C58,44 46,47 46,50 C46,53 49,55 53,55 C57,55 60,53 60,50"/>
+</vector>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_primary">
+
+    <!-- TOP ADVISORY BANNER -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_advisory_pill_amber"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="8dp"
+        android:layout_margin="16dp">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_warning_triangle"
+            android:tint="@color/amber_light"
+            android:layout_marginEnd="6dp"/>
+        <TextView
+            android:id="@+id/tvAdvisoryBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FLOOD ADVISORY"
+            android:textColor="@color/amber_light"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"/>
+    </LinearLayout>
+
+    <!-- TITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prepare Your Emergency Pack"
+        android:textColor="@color/text_primary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="4dp"/>
+
+    <!-- PROGRESS TEXT -->
+    <TextView
+        android:id="@+id/tvPackProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 of 3 critical items checked"
+        android:textColor="@color/amber_light"
+        android:textSize="13sp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="8dp"/>
+
+    <!-- PROGRESS BAR -->
+    <ProgressBar
+        android:id="@+id/progressBarPack"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="@color/amber_light"
+        android:progressBackgroundTint="@color/border"/>
+
+    <!-- PERSONALIZE BANNER -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPersonalize"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/personalize_with_ai"
+        android:textColor="@color/amber_light"
+        app:strokeColor="@color/amber_light" />
+
+    <!-- PACK ITEMS LIST -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPackItems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"/>
+
+    <!-- BOTTOM BUTTON -->
+    <Button
+        android:id="@+id/btnPackDone"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_margin="16dp"
+        android:text="All Done – I'm Ready"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/red_primary"
+        app:cornerRadius="16dp"
+        android:drawableStart="@drawable/ic_pack_bag"
+        android:drawablePadding="8dp"/>
+</LinearLayout>

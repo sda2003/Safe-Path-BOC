@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">SafePath</string>
+    <string name="back">Back</string>
+    <string name="open_organic_maps">Open in Organic Maps</string>
+    <string name="organic_maps_attribution">Basemap via Organic Maps — organicmaps.app</string>
+    <string name="navigate_shelter_organic">Navigate in Organic Maps</string>
+
+    <!-- Phone / email verification -->
+    <string name="verify_account_title">Verify your account</string>
+    <string name="verify_phone_title">Verify your phone</string>
+    <string name="verify_phone_subtitle">We\'ll text you a one-time code to unlock Family Circle features.</string>
+    <string name="verify_email_subtitle">We\'ll email you a one-time code to unlock Family Circle features.</string>
+    <string name="verify_channel_phone">Phone</string>
+    <string name="verify_channel_email">Email</string>
+    <string name="email_hint">Email address</string>
+    <string name="try_email_instead">SMS not working? Verify with email instead</string>
+    <string name="phone_hint">Mobile number</string>
+    <string name="send_verification_code">Send verification code</string>
+    <string name="verify_otp_title">Enter verification code</string>
+    <string name="verify_otp_subtitle">Enter the 6-digit code sent to %1$s</string>
+    <string name="otp_hint">6-digit code</string>
+    <string name="verify_code">Verify</string>
+    <string name="resend_code">Resend code</string>
+    <string name="verification_success_title">You\'re verified</string>
+    <string name="verification_success_subtitle">Family Circle is now unlocked. Add trusted contacts and send I\'m Safe broadcasts.</string>
+    <string name="unlock_family_circle">Continue to SafePath</string>
+    <string name="error_invalid_phone">Enter a valid phone number (e.g. 771234567).</string>
+    <string name="error_invalid_email">Enter a valid email address.</string>
+    <string name="error_invalid_otp">Enter the 6-digit code from your SMS.</string>
+    <string name="error_invalid_email_otp">Enter the 6-digit code from your email.</string>
+    <string name="signup_check_email">Account created. Check %1$s for a confirmation link or code.</string>
+    <string name="check_email_title">Check your email</string>
+    <string name="check_email_subtitle">We sent a confirmation to %1$s.\n\n1. Open the email and tap the confirm link, OR enter a 6-digit code if you received one.\n2. Then tap “Already confirmed? Sign in”.\n\nIf no email arrives, wait for the rate limit to reset, or disable Confirm email in Supabase for testing.</string>
+    <string name="open_email_app">Open email app</string>
+    <string name="open_email_failed">Could not open email app</string>
+    <string name="already_confirmed_sign_in">Already confirmed? Sign in</string>
+    <string name="code_resent">Code resent — check your inbox</string>
+
+    <!-- Family Circle gate -->
+    <string name="family_circle_title">Family Circle</string>
+    <string name="family_circle_locked">Verify your phone or email to add trusted contacts and send I\'m Safe updates.</string>
+    <string name="family_circle_unlocked">Verified — manage contacts and send I\'m Safe updates.</string>
+    <string name="family_circle_tier_info">%1$s plan — %2$d of %3$d contacts</string>
+    <string name="family_circle_offline_cached">Verified (offline) — I\'m Safe works. Connect to manage contacts.</string>
+    <string name="verify_now">Verify now</string>
+    <string name="verify_with_phone">Verify with phone</string>
+    <string name="im_safe_button">I\'m Safe</string>
+    <string name="im_safe_sent">I\'m Safe sent to your Family Circle.</string>
+    <string name="im_safe_queued">I\'m Safe saved — will send when you\'re back online.</string>
+    <string name="trusted_contacts">Trusted contacts</string>
+    <string name="contact_name_hint">Contact name</string>
+    <string name="contact_phone_hint">Phone number</string>
+    <string name="add_contact">Add contact</string>
+    <string name="remove_contact">Remove contact</string>
+    <string name="manage_family_circle">Manage Family Circle</string>
+
+    <!-- AI Prep Assistant -->
+    <string name="personalize_pack_title">Personalize My Emergency Pack</string>
+    <string name="personalize_pack_subtitle">Online only — runs once, then works offline forever.</string>
+    <string name="household_size_hint">Household size</string>
+    <string name="has_kids">Children in household</string>
+    <string name="kids_ages_hint">Children\'s ages (e.g. 3, 7)</string>
+    <string name="has_elderly">Elderly members</string>
+    <string name="has_pets">Pets</string>
+    <string name="pet_type_hint">Pet type (e.g. dog, cat)</string>
+    <string name="medical_conditions_hint">Medical conditions or medications</string>
+    <string name="generate_my_pack">Generate my pack</string>
+    <string name="personalize_with_ai">✨ Personalize with AI (online)</string>
+    <string name="view_personalized_pack">View my personalized pack</string>
+    <string name="my_personalized_pack">My Personalized Emergency Pack</string>
+    <string name="personalized_checklist">Checklist</string>
+    <string name="personalized_tips">Tailored survival tips</string>
+    <string name="using_default_checklist">Using default checklist — AI was unavailable.</string>
+    <string name="personalize_requires_internet">Internet required to personalize. Your standard offline checklist is still available.</string>
+
+    <!-- Community hub + mesh notes -->
+    <string name="community_hub_title">Community</string>
+    <string name="community_status_online">Online — chat and mesh sync available</string>
+    <string name="community_status_offline">Offline — use Mesh Notes to share nearby</string>
+    <string name="community_online_chat">Online Chat</string>
+    <string name="community_online_chat_hint">Supabase community room when you have internet.</string>
+    <string name="community_mesh_notes">Mesh Notes</string>
+    <string name="community_mesh_notes_hint">Short hazard / need / safe notes over Bluetooth &amp; Wi‑Fi Direct. Syncs to the cloud when you reconnect.</string>
+    <string name="mesh_notes_title">Mesh Notes</string>
+    <string name="mesh_note_hint">Short note (max 280 chars)</string>
+    <string name="mesh_send">Send note</string>
+    <string name="mesh_type_info">Info</string>
+    <string name="mesh_type_hazard">Hazard</string>
+    <string name="mesh_type_need">Need</string>
+    <string name="mesh_type_safe">Safe</string>
+    <string name="mesh_banner_online">Online — notes sync to cloud</string>
+    <string name="mesh_banner_online_peers">Online · %1$d mesh peer(s) nearby</string>
+    <string name="mesh_banner_offline">Offline mesh — looking for nearby phones…</string>
+    <string name="mesh_banner_offline_peers">Offline mesh · %1$d peer(s) connected</string>
+    <string name="mesh_permission_denied">Bluetooth / Nearby permissions are required for mesh notes.</string>
+
+    <!-- AI Q&A -->
+    <string name="ai_qa_title">Ask SafePath AI</string>
+    <string name="ai_qa_subtitle">Get calm, practical disaster advice for Sri Lanka. Answers are saved so they work offline next time.</string>
+    <string name="ai_qa_home_hint">Ask flood, landslide, pack, and first-aid questions</string>
+    <string name="ai_qa_suggestions">Suggested</string>
+    <string name="ai_qa_answer">Answer</string>
+    <string name="ai_qa_history">Saved answers</string>
+    <string name="ai_qa_hint">Ask what to do…</string>
+    <string name="ai_qa_ask">Ask</string>
+    <string name="ai_qa_banner_online">Online — suggested answers work anytime; custom AI answers save offline</string>
+    <string name="ai_qa_banner_offline">Offline — tap a suggested question for a built-in answer</string>
+    <string name="view_live_alert_map">View live alert map</string>
+
+    <!-- Nearby SafePath Camera Nodes -->
+    <string name="nearby_nodes_home_title">Nearby SafePath Nodes</string>
+    <string name="nearby_nodes_home_hint">Find disaster observation cameras over Bluetooth</string>
+    <string name="nearby_nodes_title">Nearby SafePath Nodes</string>
+    <string name="nearby_nodes_subtitle">Looks for SafePath-CAM-001 over Classic Bluetooth. Turn Location on, then tap Scan.</string>
+    <string name="scan_safepath_nodes">Scan for SafePath Nodes</string>
+    <string name="stop_scan_nodes">Stop Scan</string>
+    <string name="scanning_nodes">Scanning Classic Bluetooth for SafePath-CAM-001…</string>
+    <string name="tap_scan_hint">Tap scan to find nearby disaster observation nodes.</string>
+    <string name="nodes_found_count">Found %1$d node(s)</string>
+    <string name="no_camera_nodes_found">No nearby SafePath camera nodes found.</string>
+    <string name="bluetooth_disabled_hint">Turn on Bluetooth to scan for SafePath nodes.</string>
+    <string name="ble_permission_denied_explain">Bluetooth permission is required to discover SafePath camera nodes. Enable it in system Settings → Apps → SafePath → Permissions.</string>
+    <string name="connect_camera_node">Connect</string>
+    <string name="disaster_observation_node">Disaster Observation Node</string>
+    <string name="camera_node_role_line">Camera Node · %1$s</string>
+    <string name="signal_label">Signal: %1$s</string>
+    <string name="status_available">Status: Available</string>
+    <string name="safepath_camera_title">SafePath Camera</string>
+    <string name="camera_image">Camera image</string>
+    <string name="camera_status_connected">● Connected</string>
+    <string name="camera_status_connected_online">● Connected · Online</string>
+    <string name="camera_status_disconnected">○ Not connected</string>
+    <string name="open_wifi_settings">Open Wi‑Fi Settings</string>
+    <string name="open_location_settings">Turn on Location</string>
+    <string name="use_joined_camera_wifi">Use connected camera Wi‑Fi</string>
+    <string name="retry_camera_connect">Connect / Retry</string>
+    <string name="capture_new_image">Capture New Image</string>
+    <string name="refresh_camera_status">Refresh Status</string>
+    <string name="last_updated_none">Last updated: —</string>
+    <string name="last_updated_at">Last updated: %1$s</string>
+    <string name="camera_meta_node">Node: %1$s (%2$s)</string>
+    <string name="camera_meta_local_wifi">Connection: Local Wi‑Fi</string>
+    <string name="camera_meta_no_internet">Internet: Not Required</string>
+    <string name="camera_meta_location">Location: %1$.5f, %2$.5f</string>
+    <string name="location_unavailable">Location unavailable</string>
+
+    <!-- Report alert sheet -->
+    <string name="report_alert_title">Report an emergency alert</string>
+    <string name="report_alert_subtitle">Your GPS location will be included automatically.</string>
+    <string name="report_location_waiting">Waiting for location…</string>
+    <string name="report_location_getting">Getting your location…</string>
+    <string name="report_location_ready">Location ready · %1$.4f, %2$.4f</string>
+    <string name="report_location_failed">Could not get location</string>
+    <string name="report_location_retry">Retry location</string>
+    <string name="report_what_happening">What is happening?</string>
+    <string name="report_your_district">Your district</string>
+    <string name="report_severity">Severity level</string>
+    <string name="report_description_hint">Describe what you see (optional)</string>
+    <string name="report_submit">Submit alert</string>
+    <string name="report_submitting">Submitting…</string>
+    <string name="report_select_type">Select what is happening</string>
+    <string name="report_need_location">Location is required — tap retry</string>
+    <string name="report_success">Alert submitted. Stay safe.</string>
+    <string name="report_type_flood">Flood</string>
+    <string name="report_type_landslide">Landslide</string>
+    <string name="report_type_fire">Fire</string>
+    <string name="report_type_tsunami">Tsunami</string>
+    <string name="report_type_earthquake">Earthquake</string>
+    <string name="report_type_other">Other</string>
+    <string name="report_sev_low">Low</string>
+    <string name="report_sev_moderate">Moderate</string>
+    <string name="report_sev_high">High</string>
+    <string name="report_sev_critical">Critical</string>
+
+    <string name="home_no_active_alerts">No Active\nAlerts</string>
+    <string name="home_active_alert">Active\nAlert</string>
+    <string name="home_area_safe">Your area is currently safe.\nWe\'ll alert you if something changes.</string>
+    <string name="home_area_safe_with_shelters">Your area is currently safe.\nDark dots = safe shelters.</string>
+    <string name="home_affected_area">Affected area: %1$s</string>
+
+    <!-- Quick Emergency Commands -->
+    <string name="cmd_flood">FLOOD</string>
+    <string name="cmd_fire">FIRE</string>
+    <string name="cmd_landslide">LANDSLIDE</string>
+    <string name="cmd_medical">MEDICAL</string>
+    <string name="cmd_trapped">TRAPPED</string>
+    <string name="cmd_building_collapse">BUILDING COLLAPSE</string>
+    <string name="cmd_need_food_water">NEED FOOD/WATER</string>
+    <string name="cmd_need_rescue">NEED RESCUE</string>
+    <string name="cmd_safe_shelter">SAFE SHELTER</string>
+    <string name="cmd_report_hazard">REPORT HAZARD</string>
+    <string name="cmd_sos">SOS</string>
+</resources>
