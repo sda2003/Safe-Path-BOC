@@ -1,9 +1,12 @@
 package com.hades.safepath.network
 
 import com.hades.safepath.network.dto.AlertUpdateDto
+import com.hades.safepath.network.dto.CloudAlertDto
 import com.hades.safepath.network.dto.ShelterStatusDto
 import retrofit2.Response
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -33,4 +36,13 @@ interface SafePathApi {
     suspend fun getLatestAlerts(
         @Query("district") district: String
     ): Response<List<AlertUpdateDto>>
+
+    @POST("v1/alerts")
+    suspend fun postAlert(@Body body: CloudAlertDto): Response<CloudAlertDto>
+
+    @GET("v1/alerts/latest")
+    suspend fun getLatestCloudAlerts(
+        @Query("district") district: String? = null,
+        @Query("limit") limit: Int = 20
+    ): Response<List<CloudAlertDto>>
 }

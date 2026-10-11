@@ -60,6 +60,7 @@ class OfflineMapFragment : Fragment() {
     private var routePolyline: Polyline? = null
     private var routeHalo: Polyline? = null
     private val shelterMarkers = mutableListOf<Marker>()
+    private val alertMarkers = mutableListOf<Marker>()
     private val layerOverlays = mutableListOf<org.osmdroid.views.overlay.Overlay>()
     private var locationUpdatesActive = false
     private var lastGps: GeoPoint? = null
@@ -419,6 +420,10 @@ class OfflineMapFragment : Fragment() {
             drawShelters(items)
         }
 
+        viewModel.alerts.observe(viewLifecycleOwner) { alerts ->
+            drawAlerts(alerts)
+        }
+
         viewModel.route.observe(viewLifecycleOwner) { result ->
             if (result == null) {
                 drawEvacuationRoute(emptyList())
@@ -555,6 +560,26 @@ class OfflineMapFragment : Fragment() {
         if (items.isNotEmpty()) zoomToPilotContent()
     }
 
+    private fun drawAlerts(alerts: List<com.hades.safepath.data.model.Alert>) {
+        val map = _binding?.mapView ?: return
+        alertMarkers.forEach { map.overlays.remove(it) }
+        alertMarkers.clear()
+        val icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_warning_triangle)
+        alerts.forEach { alert ->
+            val marker = Marker(map).apply {
+                position = GeoPoint(alert.latitude, alert.longitude)
+                title = "${alert.type}: ${alert.district}"
+                snippet = alert.description
+                setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+                this.icon = icon
+            }
+            alertMarkers += marker
+            map.overlays.add(marker)
+        }
+        map.invalidate()
+        if (alerts.isNotEmpty()) zoomToPilotContent()
+    }
+
     private fun zoomToPilotContent() {
         val map = _binding?.mapView ?: return
         val points = mutableListOf<GeoPoint>()
@@ -565,6 +590,7 @@ class OfflineMapFragment : Fragment() {
             }
         }
         shelterMarkers.forEach { points += it.position }
+        alertMarkers.forEach { points += it.position }
         if (points.isEmpty()) {
             applyIslandViewport(map)
             return
@@ -583,6 +609,7 @@ class OfflineMapFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         _binding?.mapView?.onResume()
+        viewModel.refreshAlerts()
         myLocationOverlay?.enableMyLocation()
         if (ContextCompat.checkSelfPermission(
                 requireContext(), Manifest.permission.ACCESS_FINE_LOCATION

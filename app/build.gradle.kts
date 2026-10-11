@@ -5,7 +5,6 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.kotlin.serialization)
-    id("com.google.gms.google-services")
     id("com.google.dagger.hilt.android")
 }
 
@@ -51,6 +50,7 @@ android {
         buildConfigField("String", "SUPABASE_URL", "\"${secret("SUPABASE_URL")}\"")
         buildConfigField("String", "SUPABASE_ANON_KEY", "\"${secret("SUPABASE_ANON_KEY")}\"")
         buildConfigField("String", "GEMINI_API_KEY", "\"${secret("GEMINI_API_KEY")}\"")
+        buildConfigField("String", "SAFEPATH_API_URL", "\"${secret("SAFEPATH_API_URL")}\"")
         buildConfigField("String", "GEMINI_MODEL", "\"gemini-2.5-flash\"")
     }
 

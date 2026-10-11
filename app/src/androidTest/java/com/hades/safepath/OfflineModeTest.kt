@@ -15,7 +15,12 @@ import com.hades.safepath.data.repository.GuidanceRepository
 import com.hades.safepath.data.repository.ShelterRepository
 import com.hades.safepath.guidance.DecisionEngine
 import com.hades.safepath.location.SafePathLocationManager
+import com.hades.safepath.network.SafePathApi
+import com.hades.safepath.network.dto.AlertUpdateDto
+import com.hades.safepath.network.dto.CloudAlertDto
+import com.hades.safepath.network.dto.ShelterStatusDto
 import com.hades.safepath.routing.RoutingEngine
+import retrofit2.Response
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.gotrue.Auth
 import io.github.jan.supabase.postgrest.Postgrest
@@ -66,7 +71,7 @@ class OfflineModeTest {
         }
 
         val guidanceRepo = GuidanceRepository(db.guidanceStepDao(), db.packItemDao())
-        val alertRepo = AlertRepository(appDb.alertDao(), supabase)
+        val alertRepo = AlertRepository(appDb.alertDao(), supabase, offlineSafePathApi())
         val locationManager = SafePathLocationManager(context)
 
         routingEngine = RoutingEngine(context, db)
@@ -191,5 +196,21 @@ class OfflineModeTest {
         )
         assertNotNull("Shelters must be returned without network", shelters)
         assertTrue("At least 1 shelter must be available offline", (shelters?.size ?: 0) >= 1)
+    }
+
+    private fun offlineSafePathApi(): SafePathApi = object : SafePathApi {
+        override suspend fun getLiveShelterStatus(district: String): Response<List<ShelterStatusDto>> =
+            Response.success(emptyList())
+
+        override suspend fun getLatestAlerts(district: String): Response<List<AlertUpdateDto>> =
+            Response.success(emptyList())
+
+        override suspend fun postAlert(body: CloudAlertDto): Response<CloudAlertDto> =
+            Response.success(body)
+
+        override suspend fun getLatestCloudAlerts(
+            district: String?,
+            limit: Int
+        ): Response<List<CloudAlertDto>> = Response.success(emptyList())
     }
 }

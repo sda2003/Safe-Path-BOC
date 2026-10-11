@@ -3,7 +3,10 @@ package com.hades.safepath.data.repository
 import android.util.Log
 import com.hades.safepath.data.local.AlertDao
 import com.hades.safepath.data.model.Alert
+import com.hades.safepath.data.remote.AwsConfig
 import com.hades.safepath.data.remote.SupabaseConfig
+import com.hades.safepath.network.SafePathApi
+import com.hades.safepath.network.dto.CloudAlertDto
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.gotrue.auth
 import io.github.jan.supabase.postgrest.postgrest
@@ -23,7 +26,8 @@ import javax.inject.Singleton
 @Singleton
 class AlertRepository @Inject constructor(
     private val alertDao: AlertDao,
-    private val supabaseClient: SupabaseClient
+    private val supabaseClient: SupabaseClient,
+    private val safePathApi: SafePathApi
 ) {
     private val db get() = supabaseClient.postgrest
     private val realtime get() = supabaseClient.realtime
@@ -82,6 +86,13 @@ class AlertRepository @Inject constructor(
         return try {
             alertDao.insertAlert(local)
 
+            if (AwsConfig.isConfigured()) {
+                runCatching {
+                    val res = safePathApi.postAlert(CloudAlertDto.from(local))
+                    if (!res.isSuccessful) Log.w(TAG, "AWS alert sync HTTP ${res.code()}")
+                }.onFailure { e -> Log.e(TAG, "AWS alert sync failed; kept local copy", e) }
+            }
+
             if (!SupabaseConfig.isConfigured()) {
                 Log.w(TAG, "Supabase not configured — alert saved locally only")
                 return Result.success(Unit)
@@ -131,10 +142,34 @@ class AlertRepository @Inject constructor(
             emptyList()
         }
 
+        val aws = if (AwsConfig.isConfigured()) {
+            runCatching {
+                val res = safePathApi.getLatestCloudAlerts()
+                if (!res.isSuccessful) {
+                    Log.w(TAG, "AWS latest alerts HTTP ${res.code()}")
+                    emptyList()
+                } else {
+                    res.body().orEmpty().map { it.toAlert() }
+                }
+            }.getOrElse { e ->
+                Log.e(TAG, "AWS latest alerts failed", e)
+                emptyList()
+            }
+        } else {
+            emptyList()
+        }
+
+        val localIds = local.map { it.id }.toSet()
+        aws.filter { it.id.isNotBlank() && it.id !in localIds }.forEach { alert ->
+            runCatching { alertDao.insertAlert(alert) }
+                .onFailure { e -> Log.w(TAG, "AWS alert cache failed for ${alert.id}", e) }
+        }
+
         val byId = LinkedHashMap<String, Alert>()
         // Prefer local first so just-reported alerts always show
         local.forEach { byId[it.id] = it }
         remote.forEach { if (!byId.containsKey(it.id)) byId[it.id] = it }
+        aws.forEach { if (!byId.containsKey(it.id)) byId[it.id] = it }
         return byId.values.toList()
     }
 
