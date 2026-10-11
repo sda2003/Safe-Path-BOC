@@ -46,29 +46,52 @@ object DatabaseSeeder {
 
     private suspend fun seedShelters(db: SafePathDatabase) {
         val dao = db.shelterDao()
-        if (dao.getAllShelters().isNotEmpty()) {
-            Log.d(TAG, "Shelters already seeded — skipping")
-            return
+        if (dao.getAllShelters().isEmpty()) {
+            val shelters = defaultShelters()
+            dao.insertAll(shelters)
+            Log.d(TAG, "Seeded ${shelters.size} shelters")
+        } else {
+            Log.d(TAG, "Shelters already seeded — checking added sites")
         }
-
-        val shelters = listOf(
-            // Ratnapura district
-            Shelter(1L, "Ratnapura Central School", "Ratnapura", 6.6831, 80.3988, 500, true, "045-222-2100"),
-            Shelter(2L, "Ratnapura District Hospital", "Ratnapura", 6.6824, 80.3972, 300, true, "045-222-2261"),
-            Shelter(3L, "Ratnapura Divisional Secretariat", "Ratnapura", 6.6841, 80.3994, 200, true, "045-222-2275"),
-            // Kegalle district
-            Shelter(4L, "Kegalle Central College", "Kegalle", 7.2513, 80.3464, 450, true, "035-222-2201"),
-            Shelter(5L, "Kegalle District Hospital", "Kegalle", 7.2530, 80.3450, 350, true, "035-222-2261"),
-            Shelter(6L, "Kegalle Divisional Secretariat", "Kegalle", 7.2500, 80.3480, 200, true, "035-222-2275"),
-            // Kalutara district
-            Shelter(7L, "Kalutara North School", "Kalutara", 6.5854, 79.9607, 400, true, "034-222-2100"),
-            Shelter(8L, "Kalutara District Hospital", "Kalutara", 6.5840, 79.9590, 300, true, "034-222-2261"),
-            Shelter(9L, "Kalutara Divisional Secretariat", "Kalutara", 6.5870, 79.9620, 200, true, "034-222-2275")
-        )
-
-        dao.insertAll(shelters)
-        Log.d(TAG, "Seeded ${shelters.size} shelters")
+        // Added after the first seed. Insert by id so phones that already have
+        // the original nine shelters still pick this one up on next launch.
+        for (shelter in addedShelters()) {
+            if (dao.getShelterById(shelter.id) == null) {
+                dao.insertShelter(shelter)
+                Log.d(TAG, "Added shelter ${shelter.name}")
+            }
+        }
     }
+
+    private fun defaultShelters() = listOf(
+        // Ratnapura district
+        Shelter(1L, "Ratnapura Central School", "Ratnapura", 6.6831, 80.3988, 500, true, "045-222-2100"),
+        Shelter(2L, "Ratnapura District Hospital", "Ratnapura", 6.6824, 80.3972, 300, true, "045-222-2261"),
+        Shelter(3L, "Ratnapura Divisional Secretariat", "Ratnapura", 6.6841, 80.3994, 200, true, "045-222-2275"),
+        // Kegalle district
+        Shelter(4L, "Kegalle Central College", "Kegalle", 7.2513, 80.3464, 450, true, "035-222-2201"),
+        Shelter(5L, "Kegalle District Hospital", "Kegalle", 7.2530, 80.3450, 350, true, "035-222-2261"),
+        Shelter(6L, "Kegalle Divisional Secretariat", "Kegalle", 7.2500, 80.3480, 200, true, "035-222-2275"),
+        // Kalutara district
+        Shelter(7L, "Kalutara North School", "Kalutara", 6.5854, 79.9607, 400, true, "034-222-2100"),
+        Shelter(8L, "Kalutara District Hospital", "Kalutara", 6.5840, 79.9590, 300, true, "034-222-2261"),
+        Shelter(9L, "Kalutara Divisional Secretariat", "Kalutara", 6.5870, 79.9620, 200, true, "034-222-2275")
+    ) + addedShelters()
+
+    /** Sites added after the original seed. Keep ids stable. */
+    private fun addedShelters() = listOf(
+        // Colombo — Teaching Hospital, Thalapathpitiya, ~1.3 km north of USJ (Gangodawila).
+        Shelter(
+            10L,
+            "Sri Jayewardenepura General Hospital",
+            "Colombo",
+            6.8646,
+            79.9018,
+            400,
+            true,
+            "011-2778610"
+        )
+    )
 
     // ─────────────────────────────────────────────────────────────────────────
     // Guidance steps

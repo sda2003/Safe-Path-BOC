@@ -98,7 +98,10 @@ class ReportAlertBottomSheet : BottomSheetDialogFragment() {
                     .putString("last_alert_type", type)
                     .apply()
                 mapViewModel.loadActiveAlerts()
-                val msg = if (com.hades.safepath.data.remote.SupabaseConfig.isConfigured()) {
+                val msg = if (
+                    com.hades.safepath.data.remote.SupabaseConfig.isConfigured() ||
+                    com.hades.safepath.data.remote.AwsConfig.isConfigured()
+                ) {
                     getString(R.string.report_success)
                 } else {
                     "Alert saved on this device. Add real Supabase keys to sync online."

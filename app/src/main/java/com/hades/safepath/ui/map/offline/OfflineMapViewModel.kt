@@ -8,6 +8,8 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.hades.safepath.data.SafePathDatabase
 import com.hades.safepath.data.entity.Shelter
+import com.hades.safepath.data.model.Alert
+import com.hades.safepath.data.repository.AlertRepository
 import com.hades.safepath.data.repository.ShelterRepository
 import com.hades.safepath.data.seeding.DatabaseSeeder
 import com.hades.safepath.map.mode.EffectiveMapMode
@@ -36,6 +38,7 @@ class OfflineMapViewModel @Inject constructor(
     private val tileRepository: OfflineTileRepository,
     private val layerRepository: OfflineMapLayerRepository,
     private val shelterRepository: ShelterRepository,
+    private val alertRepository: AlertRepository,
     private val routingEngine: RoutingEngine,
     private val routingCoordinator: EvacuationRoutingCoordinator,
     private val mapModeController: MapModeController,
@@ -51,6 +54,9 @@ class OfflineMapViewModel @Inject constructor(
 
     private val _shelters = MutableLiveData<List<ShelterMapItem>>(emptyList())
     val shelters: LiveData<List<ShelterMapItem>> = _shelters
+
+    private val _alerts = MutableLiveData<List<Alert>>(emptyList())
+    val alerts: LiveData<List<Alert>> = _alerts
 
     private val _route = MutableLiveData<EvacuationRouteResult?>()
     val route: LiveData<EvacuationRouteResult?> = _route
@@ -101,6 +107,7 @@ class OfflineMapViewModel @Inject constructor(
                 routingEngine.initialise()
 
                 refreshShelters()
+                refreshAlerts()
                 _focusPilotArea.value = true
                 val shelterCount = shelterRepository.getAllShelters().size
                 val mode = mapModeController.effective.value
@@ -114,6 +121,15 @@ class OfflineMapViewModel @Inject constructor(
                 Log.e(TAG, "Map init failed", e)
                 _status.value = "Map init error: ${e.message}"
                 _ready.value = false
+            }
+        }
+    }
+
+    fun refreshAlerts() {
+        viewModelScope.launch {
+            _alerts.value = runCatching { alertRepository.getActiveAlerts() }.getOrElse { error ->
+                Log.e(TAG, "Alert refresh failed", error)
+                emptyList()
             }
         }
     }
